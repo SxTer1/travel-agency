@@ -1,0 +1,203 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --textColor: hsl(240, 4%, 36%);
+  --greyText: rgb(190,190,190);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --bodyColor: rgb(240,240,246);
+  --cardBG: rgb(225,225,235);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--whiteColorDeam);
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.26);
+  z-index: 1000;
+}
+.header .logo {
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.header .logo .icon {
+  font-size: 35px;
+  color: var(--PrimaryColor);
+  transform: translateY(5px);
+}
+.header .backdrop {
+  position: absolute;
+  background: var(--whiteColorDeam);
+  height: -moz-max-content;
+  height: max-content;
+  width: 50%;
+  border-radius: 1rem;
+  top: -106rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2001;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+  transition: 1.7s ease-in-out;
+}
+.header .backdrop .modal {
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 0.5rem 0;
+  margin: auto;
+}
+.header .backdrop .modal .form-title {
+  text-align: center;
+  margin: 40px;
+}
+.header .backdrop .modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .backdrop .modal form .form-field {
+  margin-bottom: 32px;
+}
+.header .backdrop .modal form .form-field label {
+  display: block;
+}
+.header .backdrop .modal form .form-field input {
+  padding: 16px 42px;
+  width: 100%;
+  border: 1px solid var(--PrimaryColor);
+  border-radius: 8px;
+  background-color: transparent;
+}
+.header .backdrop .modal form .form-field input:focus {
+  border-color: var(--SecondaryColor);
+  outline: none;
+}
+.header .backdrop .modal form button {
+  color: white;
+  width: 100%;
+  padding: 20px 10px;
+}
+.header .backdrop .booking_closer {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: var(--PrimaryColor);
+}
+.header .backdrop .booking_closer:hover {
+  color: var(--SecondaryColor);
+}
+.header .active_drop {
+  top: 7rem;
+}
+@media screen and (max-width: 768px) {
+  .header .nav {
+    position: absolute;
+    background: var(--whiteColorDeam);
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -106rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+    transition: 1.7s ease-in-out;
+  }
+  .header .nav .nav_list {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 0;
+    margin: auto;
+  }
+  .header .nav .nav_list .nav_item {
+    padding: 0.5rem 0;
+  }
+  .header .nav .nav_list .nav_item .nav_link {
+    color: var(--textColor);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .header .nav .nav_list .nav_item .nav_link:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .nav .nav_list .btn {
+    margin-top: 1rem;
+  }
+  .header .nav .nav_list .btn a {
+    font-weight: 600;
+    color: white;
+  }
+  .header .nav .nav_closer {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--PrimaryColor);
+  }
+  .header .nav .nav_closer:hover {
+    color: var(--SecondaryColor);
+  }
+  .header .activeNav {
+    top: 7rem;
+  }
+  .header .backdrop {
+    width: 80%;
+  }
+}
+.header .switch_nav .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+}
+.header .switch_nav:hover {
+  color: var(--SecondaryColor);
+}
+
+@media screen and (min-width: 769px) {
+  .nav_closer, .switch_nav {
+    display: none;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header .nav_list .nav_item .nav_link {
+    color: var(--textColor);
+    text-decoration: none;
+    padding: 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .header .nav_list .nav_item .nav_link:hover {
+    color: var(--PrimaryColor);
+  }
+  .header .nav_list .btn {
+    margin-left: 1rem;
+  }
+  .header .nav_list .btn a {
+    color: white;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .nav_list .nav_item {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 8.5rem;
+  }
+}/*# sourceMappingURL=navbar.css.map */

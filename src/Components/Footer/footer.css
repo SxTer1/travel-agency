@@ -1,0 +1,203 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --textColor: hsl(240, 4%, 36%);
+  --greyText: rgb(190,190,190);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --bodyColor: rgb(240,240,246);
+  --cardBG: rgb(225,225,235);
+}
+
+.footer {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.footer .video_footer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.footer .video_footer video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer .video_footer::after {
+  content: "";
+  position: absolute;
+  background: rgba(10, 84, 102, 0.3);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+}
+.footer .footer_component {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  row-gap: 2rem;
+  z-index: 100;
+}
+.footer .footer_component .contact_box {
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .footer_component .contact_box .contact_text small {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+}
+.footer .footer_component .contact_box .contact_text h2 {
+  color: white;
+  font-size: 1.8rem;
+}
+.footer .footer_component .contact_box .input {
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+}
+.footer .footer_component .contact_box .input input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 3rem;
+  border: 1px solid white;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+.footer .footer_component .contact_box .input input::-moz-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.footer .footer_component .contact_box .input input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+.footer .footer_component .contact_box .input .btn {
+  width: 100%;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+.footer .footer_component .contact_box .input .btn .icon {
+  font-size: 18px;
+}
+.footer .footer_component .footer_card {
+  position: relative;
+  padding: 1rem 1rem 4rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  background: var(--bodyColor);
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.footer .footer_component .footer_card .footer_intro {
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.footer .footer_component .footer_card .logo_box .logo {
+  color: black;
+  font-weight: 600;
+}
+.footer .footer_component .footer_card .logo_box .logo .icon {
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  margin-right: 10px;
+}
+.footer .footer_component .footer_card .footer_text {
+  font-size: 13px;
+  color: var(--textColor);
+}
+.footer .footer_component .footer_card .footer_socials {
+  gap: 1rem;
+}
+.footer .footer_component .footer_card .footer_socials .icon {
+  color: black;
+  font-size: 20px;
+}
+.footer .footer_component .footer_card .footer_socials .icon:hover {
+  color: var(--PrimaryColor);
+}
+.footer .footer_component .footer_card .footer_links {
+  flex-basis: 50%;
+  width: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.footer .footer_component .footer_card .footer_links .link_group .group_title {
+  display: block;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+.footer .footer_component .footer_card .footer_links .link_group .footer_list {
+  font-size: 15px;
+  color: var(--textColor);
+  transition: 0.3s ease-in-out;
+}
+.footer .footer_component .footer_card .footer_links .link_group .footer_list .icon {
+  font-size: 15px;
+  color: gray;
+}
+.footer .footer_component .footer_card .footer_links .link_group .footer_list:hover {
+  color: var(--PrimaryColor);
+  transform: translateX(7px);
+  cursor: pointer;
+}
+.footer .footer_component .footer_card .footer_links .link_group .footer_list:hover .icon {
+  color: var(--SecondaryColor);
+}
+.footer .footer_component .footer_card .footer_copyright {
+  background: var(--gradientColor);
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 0;
+}
+.footer .footer_component .footer_card .footer_copyright small {
+  color: white;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 840px) {
+  .footer .footer_card {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .footer .footer_card .footer_intro .logo_box .logo {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .footer .footer_card .footer_intro .logo_box .logo .icon {
+    font-size: 40px;
+  }
+  .footer .footer_card .footer_intro .footer_text {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=footer.css.map */

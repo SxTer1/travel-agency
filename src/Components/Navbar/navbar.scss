@@ -1,0 +1,242 @@
+:root{
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --textColor: hsl(240, 4%, 36%);
+    --greyText: rgb(190,190,190);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --bodyColor: rgb(240,240,246);
+    --cardBG: rgb(225,225,235);
+
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:var(--whiteColorDeam);
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.26);
+    z-index: 1000;
+    
+    .logo{
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        .icon{
+            font-size: 35px;
+            color: var(--PrimaryColor);
+            transform: translateY(5px);
+        }
+
+    }
+    .backdrop{
+        position: absolute;
+        background: var(--whiteColorDeam);
+        height: max-content;
+        width: 50%;
+        border-radius: 1rem;
+        top: -106rem;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 2001;
+        box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+        transition: 1.7s ease-in-out;
+
+        .modal{
+            flex-direction: column;
+                justify-content: center;
+                width: 80%;
+                padding: .5rem 0;
+                margin: auto;
+
+                .form-title {
+                    text-align: center;
+                    margin: 40px;
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .form-field {
+                        margin-bottom: 32px;
+
+                        label{
+                            display: block;
+                        }
+                        input{
+                            padding: 16px 42px;
+                            width: 100%;
+                            border: 1px solid var(--PrimaryColor);
+                            border-radius: 8px;
+                            background-color: transparent;
+                            &:focus{
+                                border-color: var(--SecondaryColor);
+                                outline: none;
+                            }
+                        }
+                    }
+                    button{
+                        color: white;
+                        width: 100%;
+                        padding: 20px 10px;
+                    }
+                }
+        }
+        .booking_closer{
+            position: absolute;
+            
+            top: 1rem;
+            right: 1.5rem;
+            color: var(--PrimaryColor);
+            &:hover{
+                color: var(--SecondaryColor);
+            }
+            
+        }
+    }
+    .active_drop{
+        top: 7rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav{
+            position: absolute;
+            background: var(--whiteColorDeam);
+            height: max-content;
+            width: 80%;
+            border-radius: 1rem;
+            top: -106rem;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 2000;
+            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
+            transition: 1.7s ease-in-out;
+
+            .nav_list{
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                padding: .5rem 0;
+                margin: auto;
+
+                .nav_item{
+                    padding: .5rem 0;
+
+                    .nav_link{
+                        color: var(--textColor);
+                        font-size: .9rem;
+                        font-weight: 600;
+                        &:hover{
+                            color: var(--PrimaryColor);
+                        }
+                    }
+                }
+
+                .btn{
+                    margin-top: 1rem;
+
+                    a{
+                        font-weight: 600;
+                        color: white;
+                    }
+                }
+            }
+            .nav_closer{
+                position: absolute;
+                
+                top: 1rem;
+                right: 1.5rem;
+                color: var(--PrimaryColor);
+                &:hover{
+                    color: var(--SecondaryColor);
+                }
+                
+            }
+        }
+        .activeNav{
+            top: 7rem;
+        }
+        .backdrop{
+            width: 80%;
+        }
+    }
+    
+    .switch_nav{
+        .icon{
+            font-size: 25px;
+            color: var(--PrimaryColor);
+        }
+        &:hover{
+            color: var(--SecondaryColor);
+        }
+        
+    }
+    
+
+}
+
+
+// Media 
+
+@media screen and (min-width: 769px){
+    .nav_closer, .switch_nav{
+        display: none;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+        
+        .nav_list{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+    
+            .nav_item{
+                .nav_link{
+                    color: var(--textColor);
+                    text-decoration: none;
+                    padding: 0 0.45rem;
+                    font-size: .9rem;
+                    font-weight: 500;
+
+                    &:hover{
+                        color: var(--PrimaryColor);
+                    }
+
+
+                }
+            }
+
+            .btn{
+                margin-left: 1rem;
+                a{
+                    color: white;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .header{
+        .nav_list{
+            .nav_item{
+                padding: 0 0.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header{
+        padding: 1rem 8.5rem;
+    }
+}
