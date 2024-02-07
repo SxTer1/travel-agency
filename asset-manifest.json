@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/travel-agency/static/css/main.e46a9721.css",
+    "main.js": "/travel-agency/static/js/main.131053b2.js",
+    "static/media/sea_-_24216 (Original).mp4": "/travel-agency/static/media/sea_-_24216 (Original).a5440a83c48592076bc8.mp4",
+    "static/media/ocean_-_21528 (Original).mp4": "/travel-agency/static/media/ocean_-_21528 (Original).4e26100e3f9d3ddda8b0.mp4",
+    "static/media/img1.jpg": "/travel-agency/static/media/img1.74ab68f98627fbeaaa3d.jpg",
+    "static/media/img6.jpg": "/travel-agency/static/media/img6.de1d84e1afe70e5a743e.jpg",
+    "static/media/img7.jpg": "/travel-agency/static/media/img7.854a962ddc2a66a0a275.jpg",
+    "static/media/img3.jpg": "/travel-agency/static/media/img3.d195f86762b3fece18eb.jpg",
+    "static/media/img8.jpg": "/travel-agency/static/media/img8.608b7945bcf6e7c84619.jpg",
+    "static/media/img9.jpg": "/travel-agency/static/media/img9.367bc695ab28490bcbb2.jpg",
+    "static/media/img4.jpg": "/travel-agency/static/media/img4.282c5b6b89e514a00336.jpg",
+    "static/media/img5.jpg": "/travel-agency/static/media/img5.1f9b766941804beac8a8.jpg",
+    "static/media/img2.jpg": "/travel-agency/static/media/img2.c842ecd96673c4e51ecc.jpg",
+    "index.html": "/travel-agency/index.html",
+    "main.e46a9721.css.map": "/travel-agency/static/css/main.e46a9721.css.map",
+    "main.131053b2.js.map": "/travel-agency/static/js/main.131053b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e46a9721.css",
+    "static/js/main.131053b2.js"
+  ]
+}
